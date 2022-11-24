@@ -18,7 +18,7 @@ Like you would expect in any API, creating a new object is done by posting to th
 
 ```powershell
 curl -X 'POST' \
-  'https://hostname:8443/{whatever}' \
+  'https://localhost:8123/{whatever}' \
   -H 'accept: */*' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -48,7 +48,7 @@ The objects you've posted to the endpoint of your choice are stored in memory. I
 
 ```powershell
 curl -X 'GET' \
-  'https://hostname:8443/{whatever}' \
+  'https://localhost:8123/{whatever}' \
   -H 'accept: application/json'
 ```
 
@@ -75,7 +75,7 @@ You may also get a single object. Do so by executing the following request
 
 ```powershell
 curl -X 'GET' \
-  'https://hostname:8443/{whatever}/42' \
+  'https://localhost:8123/{whatever}/42' \
   -H 'accept: application/json'
 ```
 
@@ -97,7 +97,7 @@ Like you would expect, updating an object is done by executing a PUT request:
 
 ```powershell
 curl -X 'PUT' \
-  'https://hostname:8443/{whatever}/42' \
+  'https://localhost:8123/{whatever}/42' \
   -H 'accept: */*' \
   -H 'Content-Type: application/json' \
   -d '{
@@ -116,7 +116,7 @@ Deleting objects is done by executing a DELETE http request:
 
 ```powershell
 curl -X 'DELETE' \
-  'https://hostname:8443/test/42' \
+  'https://localhost:8123/test/42' \
   -H 'accept: */*'
 ```
 
