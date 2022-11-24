@@ -31,7 +31,9 @@ curl -X 'POST' \
 
 ```
 
-You may post to anything endpoint you like. The endpoint is a variable. So, you may post to:
+There is no contract. So, you can post any object you like. As long as it's valid JSON.
+
+You may also post to any endpoint you like. The endpoint is a variable. So, you may post to:
 * https://hostname:8443/apples
 * https://hostname:8443/foobar
 * https://hostname:8443/johhny
