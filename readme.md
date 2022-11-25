@@ -34,10 +34,10 @@ curl -X 'POST' \
 There is no contract. So, you can post any object you like. As long as it's valid JSON.
 
 You may also post to any endpoint you like. The endpoint is a variable. So, you may post to:
-* http://hostname:8123/apples
-* http://hostname:8123/foobar
-* http://hostname:8123/johhny
-* http://hostname:8123/c257551d-b924-41dc-9a22-15686a7795a9
+* http://localhost:8123/apples
+* http://localhost:8123/foobar
+* http://localhost:8123/johhny
+* http://localhost:8123/c257551d-b924-41dc-9a22-15686a7795a9
 * And so forth, anything will work
 
 If you do not provide an Id in the request body, the API will create one for you. It will be of type GUID/UUID.
