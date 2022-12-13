@@ -4,7 +4,12 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddTransient<IStorage, InMemory>();
 
-builder.Services.AddCors(o => o.AddPolicy("allow-all", policy  => policy.WithOrigins("*")));
+builder.Services.AddCors(o => o.AddPolicy("allow-all", policy  =>
+{
+    policy.WithHeaders("*");
+    policy.WithOrigins("*");
+    policy.WithMethods("DELETE", "PUT", "GET");
+}));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
